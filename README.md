@@ -17,18 +17,18 @@ A comprehensive implementation and comparison of modern neural network architect
 
 ### 🧮 Recurrent Neural Networks (RNNs)
 RNNs process sequential data by maintaining a hidden state that captures temporal patterns. They’re effective for language modeling, translation, and text generation.  
-**Limitations**: Vanishing gradient problem, poor long-term memory.  
+**Limitations**: Vanishing gradient problem, poor long-term memory  
 **Improvement**: **Bidirectional RNNs** read sequences both forward and backward to capture richer context.
 
 ### 🔁 Encoder-Decoder Architecture
 A classical **Seq2Seq** approach using RNNs:
-- **Encoder**: Compresses input into a fixed context vector.
-- **Decoder**: Generates the output from the context.
+- **Encoder**: Compresses input into a fixed context vector  
+- **Decoder**: Generates the output from the context
 
-![](/Images/attention_research_1.webp)
+![Encoder-Decoder](/Images/attention_research_1.webp)
 
 ### ⚡ Transformers (Vaswani et al., 2017)
-Replaces recurrence with **self-attention** mechanisms for parallelism and long-range dependency modeling.  
+Replaces recurrence with **self-attention** mechanisms for parallelism and modeling long-range dependencies.  
 Key components:
 - Multi-head self-attention  
 - Positional encoding  
@@ -36,11 +36,11 @@ Key components:
 
 ### 🧠 BERT (Bidirectional Encoder Representations from Transformers)
 A deep, pre-trained Transformer encoder using:
-- **Masked Language Modeling (MLM)**
+- **Masked Language Modeling (MLM)**  
 - **Next Sentence Prediction (NSP)**  
 It generates **context-aware embeddings** fine-tuned for various NLP tasks.
 
-![](/Images/Bert GPT.jpeg)
+![BERT and GPT](/Images/Bert%20GPT.jpeg)
 
 ---
 
@@ -58,52 +58,3 @@ attention-is-all-you-need/
 ├── Text Generation with RNN/                      # Language modeling with RNN
 ├── Attention_is_all_you_need.pdf                  # Original Transformer paper
 └── README.md                                      # Project overview
-
----
-
-## 🧪 Components and Descriptions
-
-### 1. **Classify text with BERT/**
-Fine-tunes a pre-trained BERT model for binary/multi-class text classification. Includes:
-- Tokenization & preprocessing
-- Training loop
-- Evaluation: Accuracy, F1-score
-
-### 2. **Generating Text Using a Transformer Decoder-Only Model/**
-Implements a GPT-style **decoder-only Transformer** for autoregressive text generation.
-
-### 3. **Machine Translation French to English/**
-Compares:
-- RNN-based Seq2Seq model  
-- Transformer-based model  
-Evaluation: **BLEU score**
-
-### 4. **Question-Answering with a Multi-Layer Bidirectional RNN/**
-Trains a **Bi-RNN** to extract answers from given passages — an early-style QA system.
-
-### 5. **Simple RNN Encode-Decoder for Translation/**
-Implements a **GRU/LSTM-based** Seq2Seq model with:
-- Teacher forcing
-- BLEU score evaluation
-
-### 6. **Text Generation with RNN/**
-Trains a **character-level or word-level RNN** for creative text generation.  
-Includes temperature-based sampling for more controlled generation output.
-
----
-
-## 📘 Paper Reference
-
-> **Attention Is All You Need**  
-> *Vaswani et al., 2017*  
-> This project is heavily inspired by this landmark work in NLP.
-
----
-
-## ⚙️ Requirements
-
-Install all dependencies with:
-
-```bash
-pip install -r requirements.txt
-
